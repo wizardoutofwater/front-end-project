@@ -9,10 +9,22 @@ $(document).ready(function () {
 
                     const $drinkResults = $('#drink-results');
                     const $jumboTron = $('.jumbotron');
+            
 
                     $.get(`https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${$searchString}`).done(function (response) {
                         console.log(response);
-                        renderCocktails(response.drinks);
+                        if (response == ''){
+                            $drinkResults.html('');
+                            $drinkResults.append(
+                                `<div class="alert alert-warning alert-dismissible fade show" role="alert">
+                                <strong>Holy guacamole!</strong> You should check in on some of those fields below.
+                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
+                                  <span aria-hidden="true">&times;</span>
+                                </button>
+                              </div>`
+                            );
+                        } else{
+                        renderCocktails(response.drinks)}
                     });
 
                     const renderCocktails = (drinksArray) => {
