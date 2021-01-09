@@ -14,14 +14,15 @@ $(document).ready(function () {
                     $.get(`https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${$searchString}`).done(function (response) {
                         console.log(response);
                         if (response == ''){
+                            $jumboTron.css("display", "none")
                             $drinkResults.html('');
                             $drinkResults.append(
-                                `<div class="alert alert-warning alert-dismissible fade show" role="alert">
-                                <strong>Holy guacamole!</strong> You should check in on some of those fields below.
-                                <button type="button" class="close" data-dismiss="alert" aria-label="Close">
-                                  <span aria-hidden="true">&times;</span>
-                                </button>
-                              </div>`
+                               ` <div class="alert alert-oops" role="alert" id="oopsAlert">
+                                <h4 class="alert-heading">Oops!</h4>
+                                <p>Aww snap, we searched and searched but unfortunately <span id="searchError"> "${$searchString}" </span> isn't a type of alcohol in the database.</p>
+                                <hr class="error-divider">
+                                <p class="mb-0">Try searching again with something you've got on your bar cart (bourbon is always a good choice)</p>
+                                </div>`
                             );
                         } else{
                         renderCocktails(response.drinks)}
