@@ -2,22 +2,22 @@
 /* Original Color Scheme: {"Gunmetal":"292f36","Medium Turquoise":"4ecdc4","Mint Cream":"f7fff7","Bittersweet":"ff6b6b","Naples Yellow":"ffe66d" "paradise pink": "EF476F"} */
 
 body{
-    background-color: #292f36 ;
+    background-color: #292F36 ;
 }
 
 .jumbotron{ 
 
     display: block;
-    border: 3px solid #4ecdc4;
+    border: 3px solid #8D80AD;
     border-radius: 1rem;
-    color: #ffe66d;
+    color: #4ECDC4;
     background-color: #292f36;
 }
 #instructions {
     color: #f7fff7;
 }
 #jumboDivider {
-   background-color: #ef476f;
+   background-color: #987284;
    
 }
 
@@ -27,12 +27,12 @@ p {
 }
 
 .redTxt{
-    color:#ff6b6b;
+    color:#F7FFF7;
 }
 .movies-results{
     background-color:#292f36;
 }
- 
+
 .container{
     /* background-color:#ffe66d ; */
     /* padding-top: 20px; */
@@ -40,7 +40,7 @@ p {
 }
 
 .card{
-    border: 3px solid #4ecdc4;
+    border: 3px solid #8D80AD;
     border-radius: 1rem;
     background-color: #292f36;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .5), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
@@ -63,7 +63,7 @@ p {
 }
 .btn {
     color: #f7fff7;
-    border-color:#4ecdc4;
+    border-color:#8D80AD;
 }
 .btn-outline-secondary:hover {
     color: #f7fff7;
@@ -81,7 +81,7 @@ p {
     border-radius: 1 rem;
 }
 .navbar-brand {
-    color:#ffe66d;
+    color:#4ECDC4;
 }
 
 /* input { */
@@ -100,3 +100,8 @@ p {
     background-color:#4ecdc4;
     /* background-color:#ff6b6b; */
 }
+.full-screen {
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+  }

@@ -21,6 +21,31 @@ $('#searchButton').click(function (event) {
     // let movieData = response.Search;
   });
 
+  $('.carousel').carousel({
+    interval: 6000,
+    pause: "false"
+  });
+
+var $numberofSlides = $('.carousel-item').length;
+var $currentSlide = Math.floor((Math.random() * $numberofSlides));
+
+$('.carousel-indicators li').each(function(){
+  var $slideValue = $(this).attr('data-slide-to');
+  if($currentSlide == $slideValue) {
+    $(this).addClass('active');
+    $item.eq($slideValue).addClass('active');
+  } else {
+    $(this).removeClass('active');
+    $item.eq($slideValue).removeClass('active');
+  }
+});
+
+$(window).on('resize', function (){
+  $wHeight = $(window).height();
+  $item.height($wHeight);
+});
+$item.eq(0).addClass('active');
+
   const renderMovies = (movieArray) => {
     $jumboTron.css("display","none")
     $movieResults.html('');
@@ -54,15 +79,6 @@ $('#searchButton').click(function (event) {
   }
 });
 
-// finish this watchlist function
-    const saveToWatchList = (movieArray, movieId) => {
-        console.log(movieId);
-        const movieToAdd = movieArray.find((movie) => movie.imdbID === movieId);
-        console.log(movieToAdd);
-        let watchListJSON = localstorage.getItem('watchlist');
-        let watchList = 
-
- }
 
 });
 
