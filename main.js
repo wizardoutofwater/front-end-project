@@ -1,55 +1,32 @@
+$(document).ready(function () {
+  console.log("Main Ready!");
 
-$(document).ready(function(){
-    console.log('Ready!');
+  $("#searchButton").click(function (event) {
+    event.preventDefault();
+    let $searchString = $("#search-bar").val();
+    // console.log('button clicked.');
+    // console.log($searchString)
 
-  $('.carousel').carousel({
-    interval: 6000,
-    pause: "false"
-  });
+    const $drinkResults = $("#drink-results");
+    const $jumboTron = $(".jumbotron");
+    const $landingCarousel = $("#landing-carousel")
 
-var $numberofSlides = $('.carousel-item').length;
-var $currentSlide = Math.floor((Math.random() * $numberofSlides));
+    $.get(
+      `https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${$searchString}`
+    ).done(function (response) {
+      console.log(response);
+      renderCocktails(response.drinks);
+    });
 
-$('.carousel-indicators li').each(function(){
-  var $slideValue = $(this).attr('data-slide-to');
-  if($currentSlide == $slideValue) {
-    $(this).addClass('active');
-    $item.eq($slideValue).addClass('active');
-  } else {
-    $(this).removeClass('active');
-    $item.eq($slideValue).removeClass('active');
-  }
-});
+    const renderCocktails = (drinksArray) => {
+      $jumboTron.css("display", "none");
+      $landingCarousel.css("display", "none");
+      $drinkResults.html("");
+      
 
-$(window).on('resize', function (){
-  $wHeight = $(window).height();
-  $item.height($wHeight);
-});
-$item.eq(0).addClass('active');
-
-
-
-            $('#searchButton').click(function (event) {
-                    event.preventDefault();
-                    let $searchString = $("#search-bar").val();
-                    // console.log('button clicked.');
-                    // console.log($searchString)
-
-                    const $drinkResults = $('#drink-results');
-                    const $jumboTron = $('.jumbotron');
-
-                    $.get(`https://www.thecocktaildb.com/api/json/v1/1/filter.php?i=${$searchString}`).done(function (response) {
-                        console.log(response);
-                        renderCocktails(response.drinks);
-                    });
-
-                    const renderCocktails = (drinksArray) => {
-                        $jumboTron.css("display", "none")
-                        $drinkResults.html('');
-
-                        drinksArray.map((drink) => {
-                            $drinkResults.append(
-                                `<div class="col-md-4">
+      drinksArray.map((drink) => {
+        $drinkResults.append(
+          `<div class="col-md-4">
                                 <div class="card mb-4 box-shadow">
                                     <img class="card-img-top" src="${drink.strDrinkThumb}/preview"
                                         alt="${drink.strDrink} poster">
@@ -65,9 +42,9 @@ $item.eq(0).addClass('active');
                                         </div>
                                     </div>
                                 </div>
-                            </div>`)
-                        });
-                    }
-                });
-            });
-            
+                            </div>`
+        );
+      });
+    };
+  });
+});
