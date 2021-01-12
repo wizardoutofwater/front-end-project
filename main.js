@@ -16,7 +16,8 @@ $(document).ready(function () {
     ).done(function (response) {
       console.log(response);
       if (response == ''){
-        $jumboTron.css("display", "none")
+        $jumboTron.css("display", "none");
+        $landingCarousel.css("display", "none");
         $drinkResults.html('');
         $drinkResults.append(
            ` <div class="alert alert-oops" role="alert" id="oopsAlert">
