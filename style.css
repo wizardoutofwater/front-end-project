@@ -39,13 +39,16 @@ p {
 
 .card{
     border: 3px solid #8D80AD;
+    transition: border 0.5s;
     border-radius: 1rem;
     background-color: #292f36;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .5), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     /* max-height: 466px; */
 }
 .card:hover{
-    border: 3px solid #ffe66d;
+    border: 3px solid #4ECDC4;
+    transition: border 1s;
+    ;
 }
 .card-body{
     color: #f7fff7;
