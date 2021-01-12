@@ -100,8 +100,14 @@ p {
     background-color:#4ecdc4;
     /* background-color:#ff6b6b; */
 }
-.full-screen {
-    background-size: cover;
-    background-position: center;
-    background-repeat: no-repeat;
+
+.carousel-item,
+.carousel-inner,
+.carousel-inner img {
+    width:800px;
+    height:550px;
   }
+
+.carousel-item {
+  text-align: center;
+}

@@ -41,7 +41,7 @@ $('.carousel-indicators li').each(function(){
 });
 
 $(window).on('resize', function (){
-  $wHeight = $(window).height();
+  $wHeight = $(window).height(800);
   $item.height($wHeight);
 });
 $item.eq(0).addClass('active');
