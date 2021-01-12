@@ -16,12 +16,22 @@ body{
 #instructions {
     color: #f7fff7;
 }
-#jumboDivider {
+#jumboDivider, .error-divider {
    background-color: #987284; 
 }
 
 p {
     color:#f7fff7;
+}
+.alert-oops{
+    display: block;
+    border: 3px solid #ef476f;
+    border-radius: 1rem;
+    color: #4ECDC4;
+    background-color: #292f36;
+}
+#searchError{
+    color: #ffe66d;
 }
 
 .redTxt{
@@ -55,7 +65,7 @@ p {
     border: 20px solid #292f36;
     border-radius: 1rem;
     width: 100%;
-    height: 65vh;
+    height: 100%;
     object-fit: cover;
    
 }
