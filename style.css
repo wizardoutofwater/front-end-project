@@ -113,3 +113,8 @@ p {
     background-position: center;
     background-repeat: no-repeat;
   }
+
+div.carousel-item img{
+margin:auto;
+width:50%;
+}
