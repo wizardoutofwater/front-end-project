@@ -80,7 +80,7 @@ p {
     background-color: #4ecdc4;
     border-color: #292f36;
 }
-.box-shadow { box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05); }
+.box-shadow { box-shadow: 0 .25rem .75rem #00000066; }
 
 #navbar {
     color:#292f36;
