@@ -119,5 +119,6 @@ p {
 div.carousel-item img{
 margin:auto;
 width:50%;
+height: 50%;
 border-radius: 2rem;
 }
