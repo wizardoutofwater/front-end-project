@@ -45,10 +45,9 @@ $(document).ready(function () {
                                     <img class="card-img-top" src="${drink.strDrinkThumb}/preview"
                                         alt="${drink.strDrink} poster">
                                     <div class="card-body">
-                                        <p>
-                                            <div class="lead movie-title">${drink.strDrink}</div>
-                                            <div class=" text-muted movie-release"></div>
-                                        </p>
+                                        
+                                            <div class="lead drink-title font-weight-light text-truncate text-capitalize text-center">${drink.strDrink}</div>
+                                
                                         <div class="d-flex justify-content-between align-items-center">
                                             
                                             </div>

@@ -49,13 +49,15 @@ p {
 
 .card{
     border: 3px solid #8D80AD;
+    transition: border 0.5s;
     border-radius: 1rem;
     background-color: #292f36;
     box-shadow: 0 4px 8px 0 rgba(0, 0, 0, .5), 0 6px 20px 0 rgba(0, 0, 0, 0.19);
     /* max-height: 466px; */
 }
 .card:hover{
-    border: 3px solid #ffe66d;
+    border: 3px solid #4ECDC4;
+    transition: border 1s;
 }
 .card-body{
     color: #f7fff7;
@@ -63,7 +65,7 @@ p {
 .card-img-top {
     box-sizing:border-box;
     border: 20px solid #292f36;
-    border-radius: 1rem;
+    border-radius: 2rem;
     width: 100%;
     height: 100%;
     object-fit: cover;
@@ -78,7 +80,7 @@ p {
     background-color: #4ecdc4;
     border-color: #292f36;
 }
-.box-shadow { box-shadow: 0 .25rem .75rem rgba(0, 0, 0, .05); }
+.box-shadow { box-shadow: 0 .25rem .75rem #00000066; }
 
 #navbar {
     color:#292f36;
@@ -104,8 +106,8 @@ p {
     color: #f7fff7;
 }
 #searchButton:hover{
-    color:#ffe66d;
-    background-color:#4ecdc4;
+    color:#4ECDC4;
+    background-color:#8D80AD;
     /* background-color:#ff6b6b; */
 }
 .full-screen {
@@ -117,4 +119,5 @@ p {
 div.carousel-item img{
 margin:auto;
 width:50%;
+border-radius: 2rem;
 }
