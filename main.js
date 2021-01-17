@@ -41,9 +41,9 @@ $(document).ready(function () {
       drinksArray.map((drink) => {
         $drinkResults.append(
           `<div class="col-md-4">
-                                <div class="card mb-4 box-shadow">
+                                <div class="cocktail card mb-4 box-shadow" id="${drink.idDrink}">
                                     <img class="card-img-top" src="${drink.strDrinkThumb}/preview"
-                                        alt="${drink.strDrink} poster">
+                                        alt="photo of ${drink.strDrink}">
                                     <div class="card-body">
                                         
                                             <div class="lead drink-title font-weight-light text-truncate text-capitalize text-center">${drink.strDrink}</div>
