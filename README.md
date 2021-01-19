@@ -7,11 +7,11 @@
 * [Next Steps](#next-steps)
 
 ## General info
-This project is a cocktail website that enables users to look up drinks by name or ingredient. 
+This project is a cocktail website that enables users to look up drinks ingredient and display the recipe.
 
 ## Team members 
-Mike McDonald 
-Zuri Espinoza 
+Mike McDonald - github.com/wizardoutofwater
+Zuri Espinoza - github.com/zuri-espinoza
 	
 ## Technologies
 Project is created with:
@@ -26,4 +26,4 @@ Project is created with:
 To run this project, users can go to the following link: https://tipsytales.netlify.app/
 
 ## Next Steps
-In the future, we intend to add a blog and incorporate videos of mixologists preparing certain drinks and walking users through receipes. We would also like to include a feature that allows users to click on the drink result card tofor it to flip over and reveal the receipe. 
+In the future, we intend to add a blog and incorporate videos of mixologists preparing certain drinks and walking users through receipes. We would also like to include a feature that allows users to click on the drink result card and for it to flip over and reveal the receipe. 
