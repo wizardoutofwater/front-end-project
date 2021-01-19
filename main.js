@@ -20,9 +20,9 @@ $(document).ready(function () {
         $landingCarousel.css("display", "none");
         $drinkResults.html('');
         $drinkResults.append(
-           ` <div class="alert alert-oops" role="alert" id="oopsAlert">
+           ` <div class="alert alert-oops mx-auto" role="alert" id="oopsAlert">
             <h4 class="alert-heading">Oops!</h4>
-            <p>Aww snap, we searched and searched but unfortunately <span id="searchError"> "${$searchString}" </span> isn't a type of alcohol in the database.</p>
+            <p>Aww snap, we searched and searched but unfortunately <span id="searchError"> "${$searchString}" </span> isn't an ingredient in the database.</p>
             <hr class="error-divider">
             <p class="mb-0">Try searching again with something you've got on your bar cart (bourbon is always a good choice)</p>
             </div>`
@@ -41,9 +41,9 @@ $(document).ready(function () {
       drinksArray.map((drink) => {
         $drinkResults.append(
           `<div class="col-md-4">
-                                <div class="card mb-4 box-shadow">
+                                <div class="cocktail card mb-4 box-shadow" id="${drink.idDrink}">
                                     <img class="card-img-top" src="${drink.strDrinkThumb}/preview"
-                                        alt="${drink.strDrink} poster">
+                                        alt="photo of ${drink.strDrink}">
                                     <div class="card-body">
                                         
                                             <div class="lead drink-title font-weight-light text-truncate text-capitalize text-center">${drink.strDrink}</div>
