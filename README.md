@@ -7,11 +7,11 @@
 * [Next Steps](#next-steps)
 
 ## General info
-This project is a cocktail website that enables users to look up drinks ingredient and display the recipe.
+This project is a cocktail website that enables users to look up drinks by ingredient and display the recipe.
 
 ## Team members 
-Mike McDonald - github.com/wizardoutofwater
-Zuri Espinoza - github.com/zuri-espinoza
+**Mike McDonald**  
+**Zuri Espinoza**  
 	
 ## Technologies
 Project is created with:
