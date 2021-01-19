@@ -16,7 +16,7 @@ body{
 #instructions {
     color: #f7fff7;
 }
-#jumboDivider, .error-divider {
+#jumboDivider, .error-divider, .recipe-divider {
    background-color: #987284; 
 }
 
@@ -25,11 +25,19 @@ p {
 }
 .alert-oops{
     display: block;
-    border: 3px solid #ef476f;
+    border: 3px solid #cfbcc0;
     border-radius: 1rem;
     color: #4ECDC4;
     background-color: #292f36;
 }
+.alert-recipe{
+    display: block;
+    border: 3px solid #8D80AD;
+    border-radius: 1rem;
+    color: #4ECDC4;
+    background-color: #292f36;
+}
+
 #searchError{
     color: #ffe66d;
 }
