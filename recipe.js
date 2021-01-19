@@ -25,7 +25,7 @@ $(document).ready(function () {
           ` <div class="container-fluid">
           <div class="alert alert-recipe mx-auto alert-dismissible fade show" role="alert">
           <h4 class="recipe-heading"> ${drink.strDrink}</h4>
-            <ul class"list-group" id="ingredients">
+            <ul class="list-unstyled" id="ingredients">
               <li class="ingredient"> <span>${drink.strMeasure1} </span> <span> ${drink.strIngredient1}</span></li>
               <li class="ingredient"> <span>${drink.strMeasure2} </span> <span> ${drink.strIngredient2}</span></li>
               <li class="ingredient"> <span>${drink.strMeasure3} </span> <span> ${drink.strIngredient3}</span></li>
@@ -54,14 +54,11 @@ $(document).ready(function () {
         $("span:contains(null)").each(function () {
           $(this).remove();
         });
-        // remove empty list elements
-        $(".ingredient").each(function () {
-          console.log("blerg");
-          // breaks here????
-          if ($(".ingredient").text() == "") {
-            console.log("shit is empty!");
-          }
-        });
+       
+        // $("span:contains(null)").each(function () {
+        //   $(this).remove();
+        // });
+       
       });
     };
   });
