@@ -130,3 +130,10 @@ width:50%;
 height: 50%;
 border-radius: 2rem;
 }
+
+.navbar-toggler {
+    border: 1px solid #4ecdc4;
+}
+.navbar-toggler-icon {
+  background-color: #4ecdc4;
+}

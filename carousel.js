@@ -13,16 +13,16 @@ $('.carousel-indicators li').each(function(){
   var $slideValue = $(this).attr('data-slide-to');
   if($currentSlide == $slideValue) {
     $(this).addClass('active');
-    $item.eq($slideValue).addClass('active');
+    // $item.eq($slideValue).addClass('active');
   } else {
     $(this).removeClass('active');
-    $item.eq($slideValue).removeClass('active');
+    // $item.eq($slideValue).removeClass('active');
   }
 });
 
 $(window).on('resize', function (){
   $wHeight = $(window).height();
-  $item.height($wHeight);
+  // $item.height($wHeight);
 });
-$item.eq(0).addClass('active');
+// $item.eq(0).addClass('active');
 });
